@@ -3,7 +3,6 @@ import path from 'path'
 import typescript from 'rollup-plugin-typescript2'
 import copy from 'rollup-plugin-copy'
 import dts from 'rollup-plugin-dts'
-import { terser } from 'rollup-plugin-terser'
 
 const src = 'src'
 
@@ -11,7 +10,6 @@ const main = (pkg) => {
   const copyTargets = []
   const plugins = [
     typescript({ useTsconfigDeclarationDir: true }),
-    process.env.M !== 'false' && terser(),
     copy({ targets: copyTargets }),
   ]
 
