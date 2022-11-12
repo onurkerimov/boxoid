@@ -56,7 +56,7 @@ const box = function (this: any, as: any, options: any) {
     const finalProps = Object.assign(nextOptions, nextProps)
     // Avoid extra `React.createElement` call if it's a non-intrinsic element
     // This is also good for React Devtools
-    return typeof as === 'string' ? React.createElement(as, finalProps) : as(finalProps)
+    return typeof as === 'function' ? as(finalProps) : React.createElement(as, finalProps)
   })
 } as Box
 

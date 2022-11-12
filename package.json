@@ -1,6 +1,6 @@
 {
   "name": "boxoid",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "./index.js",
   "module": "./index.esm.js",
   "types": "./index.d.ts",
